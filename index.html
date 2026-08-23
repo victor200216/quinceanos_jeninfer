@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Mis 15 Años</title>
+<meta name="description" content="Invitación digital de Mis 15 Años">
+
+<!-- Google Fonts: Cormorant Garamond (títulos elegantes), Jost (texto legible), Mrs Saint Delafield (frase manuscrita) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============================================================
+     ORNAMENTO SVG REUTILIZABLE (el "sello" floral, elemento firma)
+     Se usa como separador de secciones y marco decorativo.
+     ============================================================ -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="ornamento-guirnalda" viewBox="0 0 200 60">
+      <path d="M10 30 C 40 5, 70 5, 100 30 C 130 55, 160 55, 190 30" fill="none" stroke="currentColor" stroke-width="1"/>
+      <circle cx="100" cy="30" r="3" fill="currentColor"/>
+      <path d="M92 30 Q100 18 108 30 Q100 42 92 30 Z" fill="currentColor" opacity="0.8"/>
+      <circle cx="45" cy="17" r="1.6" fill="currentColor"/>
+      <circle cx="155" cy="17" r="1.6" fill="currentColor"/>
+    </symbol>
+    <symbol id="sello-inicial" viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="1"/>
+      <circle cx="60" cy="60" r="48" fill="none" stroke="currentColor" stroke-width="0.6"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============================================================
+     PANTALLA DE CARGA / PORTADA (pantalla completa)
+     ============================================================ -->
+<section id="portada" class="portada">
+  <div class="portada__destellos" aria-hidden="true"></div>
+  <div class="portada__contenido">
+    <p class="portada__eyebrow">Mis 15 Años</p>
+    <svg class="portada__sello" viewBox="0 0 120 120" aria-hidden="true">
+      <use href="#sello-inicial">Jennifer Paola  Bandera Ar</use>
+      <text x="60" y="72" text-anchor="middle" class="portada__sello-letra" id="selloInicial">Q</text>
+    </svg>
+    <h1 class="portada__nombre" id="nombrePortada">[Jennifer Paola  Bandera Araujo] </h1>
+    <p class="portada__frase">Hay momentos en la vida que merecen ser compartidos<br>y este es uno de ellos.</p>
+    <svg class="ornamento" viewBox="0 0 200 60" aria-hidden="true"><use href="#ornamento-guirnalda"></use></svg>
+    <button class="btn btn--dorado" id="btnAbrirInvitacion">Abrir invitación <span class="btn__destello">✨</span></button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTENIDO PRINCIPAL (oculto hasta abrir la invitación)
+     ============================================================ -->
+<main id="contenidoPrincipal" class="contenido-principal">
+
+  <!-- Botón flotante de música -->
+  <button id="btnMusica" class="btn-flotante" aria-label="Activar o pausar música" aria-pressed="false">
+    <span class="btn-flotante__icono">🔊</span>
+  </button>
+
+  <!-- ================= INVITACIÓN PERSONALIZADA ================= -->
+  <section class="seccion seccion--invitacion reveal">
+    <svg class="ornamento ornamento--claro" viewBox="0 0 200 60" aria-hidden="true"><use href="#ornamento-guirnalda"></use></svg>
+    <p class="dedicatoria" id="dedicatoriaInvitado">Esta invitación es especialmente para ti 💕</p>
+    <h2 class="titulo-seccion titulo-seccion--script" id="saludoInvitado">Querido invitado</h2>
+    <p class="texto-cuerpo" id="mensajeInvitado">
+      Nos encantaría contar contigo para celebrar este momento tan especial.
+    </p>
+  </section>
+
+  <!-- ================= MOMENTOS ESPECIALES (CARRUSEL) ================= -->
+  <section class="seccion seccion--carrusel reveal">
+    <p class="eyebrow">Momentos especiales</p>
+    <h2 class="titulo-seccion">Un vistazo a mi historia</h2>
+
+    <div class="carrusel" id="carrusel">
+      <div class="carrusel__pista" id="carruselPista">
+        <!-- Las imágenes se inyectan desde js/script.js (arreglo `fotosCarrusel`) -->
+      </div>
+      <button class="carrusel__flecha carrusel__flecha--izq" id="carruselAnterior" aria-label="Foto anterior">&#10094;</button>
+      <button class="carrusel__flecha carrusel__flecha--der" id="carruselSiguiente" aria-label="Foto siguiente">&#10095;</button>
+      <div class="carrusel__puntos" id="carruselPuntos"></div>
+    </div>
+  </section>
+
+  <!-- ================= INFORMACIÓN DEL EVENTO ================= -->
+  <section class="seccion seccion--evento reveal">
+    <svg class="ornamento" viewBox="0 0 200 60" aria-hidden="true"><use href="#ornamento-guirnalda"></use></svg>
+    <p class="eyebrow">✨ Mis 15 Años</p>
+    <h2 class="titulo-seccion">Detalles del evento</h2>
+
+    <div class="tarjetas-info">
+      <div class="tarjeta-info">
+        <span class="tarjeta-info__icono">📅</span>
+        <span class="tarjeta-info__label">Fecha</span>
+        <span class="tarjeta-info__valor" id="infoFecha">[Día, Mes, Año]</span>
+      </div>
+      <div class="tarjeta-info">
+        <span class="tarjeta-info__icono">🕐</span>
+        <span class="tarjeta-info__label">Hora</span>
+        <span class="tarjeta-info__valor" id="infoHora">[Hora]</span>
+      </div>
+      <div class="tarjeta-info">
+        <span class="tarjeta-info__icono">📍</span>
+        <span class="tarjeta-info__label">Lugar</span>
+        <span class="tarjeta-info__valor" id="infoLugar">[Nombre del lugar]</span>
+      </div>
+      <div class="tarjeta-info">
+        <span class="tarjeta-info__icono">🏠</span>
+        <span class="tarjeta-info__label">Dirección</span>
+        <span class="tarjeta-info__valor" id="infoDireccion">[Dirección]</span>
+      </div>
+    </div>
+
+    <button class="btn btn--contorno" id="btnAgregarCalendario">Agregar a mi calendario 🗓️</button>
+  </section>
+
+  <!-- ================= CUENTA REGRESIVA ================= -->
+  <section class="seccion seccion--cuenta-regresiva reveal">
+    <p class="eyebrow eyebrow--claro">Faltan…</p>
+    <div class="cuenta-regresiva" id="cuentaRegresiva">
+      <div class="cuenta-regresiva__bloque">
+        <span class="cuenta-regresiva__numero" id="crDias">00</span>
+        <span class="cuenta-regresiva__label">días</span>
+      </div>
+      <div class="cuenta-regresiva__bloque">
+        <span class="cuenta-regresiva__numero" id="crHoras">00</span>
+        <span class="cuenta-regresiva__label">horas</span>
+      </div>
+      <div class="cuenta-regresiva__bloque">
+        <span class="cuenta-regresiva__numero" id="crMinutos">00</span>
+        <span class="cuenta-regresiva__label">min</span>
+      </div>
+      <div class="cuenta-regresiva__bloque">
+        <span class="cuenta-regresiva__numero" id="crSegundos">00</span>
+        <span class="cuenta-regresiva__label">seg</span>
+      </div>
+    </div>
+    <p class="cuenta-regresiva__mensaje-final" id="mensajeHoyEsElDia" hidden>¡Hoy es el gran día! 🎉</p>
+  </section>
+
+  <!-- ================= CÓDIGO DE VESTIMENTA ================= -->
+  <section class="seccion seccion--vestimenta reveal">
+    <p class="eyebrow">Código de vestimenta 👗</p>
+    <h2 class="titulo-seccion">Etiqueta rigurosa</h2>
+    <p class="texto-cuerpo">
+      Sugerimos tonos champagne, dorado o negro para acompañar la elegancia de la noche.
+      Evitemos el color rosado , reservado para la quinceañera.
+    </p>
+    <div class="paleta-vestimenta" aria-hidden="true">
+      <span class="paleta-vestimenta__color" style="background:#F0E4D0"></span>
+      <span class="paleta-vestimenta__color" style="background:#C9A15B"></span>
+      <span class="paleta-vestimenta__color" style="background:#2B2320"></span>
+    </div>
+  </section>
+
+  <!-- ================= PROGRAMA DE LA NOCHE ================= -->
+  <section class="seccion seccion--programa reveal">
+    <p class="eyebrow">Programa de la noche</p>
+    <h2 class="titulo-seccion">Así viviremos la velada</h2>
+    <ol class="programa-lista">
+      <li class="programa-lista__item">
+        <span class="programa-lista__hora">7:30 pm</span>
+        <span class="programa-lista__texto">Recepción de invitados</span>
+      </li>
+      <li class="programa-lista__item">
+        <span class="programa-lista__hora">8:00 pm</span>
+        <span class="programa-lista__texto">Entrada de la quinceañera</span>
+      </li>
+      <li class="programa-lista__item">
+        <span class="programa-lista__hora">8:30 pm</span>
+        <span class="programa-lista__texto">Vals y brindis</span>
+      </li>
+      <li class="programa-lista__item">
+        <span class="programa-lista__hora">10:00 pm</span>
+        <span class="programa-lista__texto">Cena</span>
+      </li>
+      <li class="programa-lista__item">
+        <span class="programa-lista__hora">11:00 pm</span>
+        <span class="programa-lista__texto">Fiesta y baile</span>
+      </li>
+    </ol>
+    
+   <!--  <p class="programa-nota">Horario de referencia — se puede editar libremente en el HTML.</p> -->
+  </section>
+
+  <!-- ================= UBICACIÓN ================= -->
+  <section class="seccion seccion--ubicacion reveal">
+    <svg class="ornamento" viewBox="0 0 200 60" aria-hidden="true"><use href="#ornamento-guirnalda"></use></svg>
+    <p class="eyebrow">¿Dónde será?</p>
+    <h2 class="titulo-seccion" id="ubicacionDireccion">[Dirección del evento]</h2>
+
+    <div class="mapa-contenedor">
+      <!-- Reemplazar el "src" del iframe por el enlace real de Google Maps (modo "insertar mapa") -->
+      <iframe
+        id="mapaIframe"
+        src="https://www.google.com/maps?q=Bogot%C3%A1,+Colombia&output=embed"
+        width="100%" height="100%" style="border:0;"
+        allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Mapa del lugar del evento">
+      </iframe>
+    </div>
+
+    <a href="#" id="btnComoLlegar" target="_blank" rel="noopener" class="btn btn--dorado btn--ancho">Cómo llegar 📍</a>
+  </section>
+
+  <!-- ================= CONFIRMACIÓN DE ASISTENCIA ================= -->
+  <section class="seccion seccion--rsvp reveal">
+    <p class="eyebrow eyebrow--claro">Confirma tu asistencia</p>
+    <h2 class="titulo-seccion titulo-seccion--sobre-oscuro">Tu presencia hará que este día sea aún más especial</h2>
+    <p class="texto-cuerpo texto-cuerpo--sobre-oscuro">Por favor, confirma tu asistencia antes de la fecha del evento.</p>
+
+    <form id="formRSVP" class="form-rsvp">
+      <label class="form-rsvp__campo">
+        <span>Nombre del invitado</span>
+        <input type="text" id="rsvpNombre" name="nombre" placeholder="Escribe tu nombre" required>
+      </label>
+
+      <p class="form-rsvp__cupos" id="rsvpCupos">Esta invitación incluye 1 cupo(s) / pase(s)</p>
+
+      <fieldset class="form-rsvp__campo form-rsvp__campo--radios">
+        <legend>¿Asistirás?</legend>
+        <label class="form-rsvp__radio">
+          <input type="radio" name="asistencia" value="Sí, asistiré" checked>
+          <span>✅ Sí, asistiré</span>
+        </label>
+        <label class="form-rsvp__radio">
+          <input type="radio" name="asistencia" value="No podré asistir">
+          <span>❌ No podré asistir</span>
+        </label>
+      </fieldset>
+
+      <label class="form-rsvp__campo">
+        <span>Mensaje opcional</span>
+        <textarea id="rsvpMensaje" name="mensaje" rows="3" placeholder="Escribe un mensaje para la quinceañera (opcional)"></textarea>
+      </label>
+
+      <button type="submit" class="btn btn--dorado btn--ancho">Confirmar asistencia</button>
+    </form>
+  </section>
+
+  <!-- ================= REGALOS ================= -->
+  <section class="seccion seccion--regalos reveal">
+    <p class="eyebrow">🎁</p>
+    <h2 class="titulo-seccion">Tu presencia es nuestro mejor regalo</h2>
+    <p class="texto-cuerpo">
+      Si deseas tener un detalle con la quinceañera, agradecemos mucho tu cariño.
+      Para esta ocasión tendremos lluvia de sobres.
+    </p>
+    <div class="icono-regalo" aria-hidden="true">💌</div>
+  </section>
+
+  <!-- ================= GALERÍA ================= -->
+  <section class="seccion seccion--galeria reveal">
+    <p class="eyebrow">Galería</p>
+    <h2 class="titulo-seccion">Más momentos</h2>
+    <div class="galeria" id="galeria">
+      <!-- Las miniaturas se inyectan desde js/script.js (arreglo `fotosGaleria`) -->
+    </div>
+  </section>
+
+  <footer class="pie-pagina">
+    <svg class="ornamento" viewBox="0 0 200 60" aria-hidden="true"><use href="#ornamento-guirnalda"></use></svg>
+    <p>Con cariño, <span id="pieNombre">[Nombre de la Quinceañera]</span> 💕</p>
+  </footer>
+
+</main>
+
+<!-- ================= LIGHTBOX (vista ampliada de galería) ================= -->
+<div id="lightbox" class="lightbox" hidden>
+  <button class="lightbox__cerrar" id="lightboxCerrar" aria-label="Cerrar imagen">&times;</button>
+  <img id="lightboxImagen" class="lightbox__imagen" src="" alt="Fotografía ampliada">
+</div>
+
+<!-- Audio de fondo: reemplazar el "src" por la ruta real del archivo de música -->
+<audio id="musicaFondo" loop preload="none">
+  <source src="music/musica.mp3" type="audio/mpeg">
+</audio>
+
+<script src="js/script.js"></script>
+</body>
+</html>
