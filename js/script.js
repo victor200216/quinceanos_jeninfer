@@ -40,7 +40,7 @@ const invitados = [
   { slug: "sergio",           nombre: "Sergio",           tipo: "Sergio", cupos: 1 },
   { slug: "estela-mello",          nombre: "Estela , Mello",          tipo: "Estela y Mello", cupos: 2 },
   { slug: "juana-yovani",         nombre: "Juana , Yovani",         tipo: "Juana y Yovani", cupos: 2 },
-  { slug: "yeritza",              nombre: "Yeritza , Familia",      tipo: "Familia Yeritza", cupos: 4 },
+  { slug: "yeritza",              nombre: "Yeritza , Familia",      tipo: "Yeritza y Familia", cupos: 4 },
   { slug: "francisco",            nombre: "Francisco",              tipo: "Francisco", cupos: 1 },
   { slug: "jorgeluis",         nombre: "Jorge Luis",         tipo: "Jorge Luis", cupos: 1 },
   { slug: "claudia",         nombre: "Claudia",         tipo: "Claudia", cupos: 1 },
@@ -51,19 +51,19 @@ const invitados = [
   { slug: "lucho",         nombre: "Lucho, familia",         tipo: "Lucho y familia", cupos: 4 },
   { slug: "berlin",         nombre: "Berlín",         tipo: "Berlín", cupos: 1 },
   { slug: "carla",         nombre: "Carla",         tipo: "Carla", cupos: 1 },
-  { slug: "lizandro",         nombre: "Lizandro",         tipo: "Lizandro", cupos: 1 },
+  { slug: "lizardo",         nombre: "Lizardo",         tipo: "Lizardo", cupos: 1 },
   { slug: "mariaj",         nombre: "Maria José",         tipo: "Maria José", cupos: 1 },
   { slug: "sara",         nombre: "Sara",         tipo: "Sara", cupos: 1 },
   { slug: "emanuel",         nombre: "Emanuel",         tipo: "Emanuel", cupos: 1 },
   { slug: "andresf",         nombre: "Andrés Felipe",         tipo: "Andrés Felipe", cupos: 1 },
-  { slug: "natalia",         nombre: "Natalia",         tipo: "Natalia", cupos: 1 },
   { slug: "victor-michell",         nombre: "Victor , Michell",         tipo: "Victor y Michell", cupos: 2 },
   { slug: "diego-rosa",         nombre: "Diego , Rosa",         tipo: "Diego y Rosa", cupos: 2 },
-  { slug: "zenalda",         nombre: "Zenalda",         tipo: "Zenalda", cupos: 1 },
+  { slug: "zenaida",         nombre: "Zenaida",         tipo: "Zenaida", cupos: 1 },
   { slug: "yuber",         nombre: "Yuber",         tipo: "Yuber", cupos: 1 },
   { slug: "karen",         nombre: "Karen",         tipo: "Karen", cupos: 1 },
   { slug: "william",         nombre: "William",         tipo: "William", cupos: 1 },
   { slug: "silvio",         nombre: "Silvio",         tipo: "Silvio", cupos: 1 },
+  { slug: "salome",         nombre: "Salome",         tipo: "Salome", cupos: 1 },
   { slug: "marlon",         nombre: "Marlon",         tipo: "Marlon", cupos: 1 },
   { slug: "maruja-gabriela",         nombre: "Maruja , Gabriela",         tipo: "Maruja y Gabriela", cupos: 2 },
   { slug: "marile",         nombre: "Marile",         tipo: "Marile", cupos: 1 },
@@ -71,10 +71,13 @@ const invitados = [
   { slug: "yulieht",         nombre: "Yulieht",         tipo: "Yulieht", cupos: 1 },
   { slug: "luis-familia",         nombre: "Luis, familia",         tipo: "Luis y familia", cupos: 3 },
   { slug: "nataliab",         nombre: "Natalia B.",         tipo: "Natalia B.", cupos: 1 },
-  { slug: "andres",         nombre: "Andrés",         tipo: "Andrés", cupos: 1 }
-  ,{ slug: "dioni",         nombre: "Dioni",         tipo: "Dioni", cupos: 1 },
+  { slug: "andres",         nombre: "Andrés",         tipo: "Andrés", cupos: 1 },
+  { slug: "dioni",         nombre: "Dioni",         tipo: "Dioni", cupos: 1 },
   { slug: "aleidy",         nombre: "Aleidy , Ariana",         tipo: "Aleidy y Ariana", cupos: 2 },
-  { slug: "Yericel",         nombre: "Yericel",         tipo: "Yericel", cupos: 1 }
+  { slug: "yericel",         nombre: "Yericel",         tipo: "Yericel", cupos: 1 },
+  { slug: "ledis",         nombre: "Ledis",         tipo: "Ledis", cupos: 1 },
+  { slug: "claudina",         nombre: "Claudina",         tipo: "Claudina", cupos: 1 },
+  { slug: "jhoana",         nombre: "Jhoana",         tipo: "Jhoana", cupos: 1 }
   
 
 ];
