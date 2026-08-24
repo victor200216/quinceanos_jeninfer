@@ -72,15 +72,10 @@ const invitados = [
   { slug: "luis-familia",         nombre: "Luis, familia",         tipo: "Luis y familia", cupos: 3 },
   { slug: "nataliab",         nombre: "Natalia B.",         tipo: "Natalia B.", cupos: 1 },
   { slug: "andres",         nombre: "Andrés",         tipo: "Andrés", cupos: 1 }
-  /*,{ slug: "",         nombre: "",         tipo: "", cupos:  },
-  { slug: "",         nombre: "",         tipo: "", cupos:  },
-  { slug: "",         nombre: "",         tipo: "", cupos:  },
-  { slug: "",         nombre: "",         tipo: "", cupos:  },
-  { slug: "",         nombre: "",         tipo: "", cupos:  },
-  { slug: "",         nombre: "",         tipo: "", cupos:  },
-  { slug: "",         nombre: "",         tipo: "", cupos:  },
-  { slug: "",         nombre: "",         tipo: "", cupos:  },
-  { slug: "",         nombre: "",         tipo: "", cupos:  }*/
+  ,{ slug: "dioni",         nombre: "Dioni",         tipo: "Dioni", cupos: 1 },
+  { slug: "aleidy",         nombre: "Aleidy , Ariana",         tipo: "Aleidy y Ariana", cupos: 2 },
+  { slug: "Yericel",         nombre: "Yericel",         tipo: "Yericel", cupos: 1 }
+  
 
 ];
 
