@@ -14,9 +14,9 @@
    La fecha debe ir en formato "AAAA-MM-DDTHH:MM:00" (24 horas).
 --------------------------------------------------------------------- */
 const configuracion = {
-  nombreQuinceanera: "Jennifer Paola Bandera Araujo ",
-  fechaEvento: "2026-09-02T19:00:00",      // Año-Mes-DíaTHora:Minuto:00
-  fechaTextoLegible: "02 de septiembre de 2026", // Se muestra en la sección "Detalles del evento"
+  nombreQuinceanera: "Jennyfer Paola Bandera Araujo ",
+  fechaEvento: "2026-09-01T19:00:00",      // Año-Mes-DíaTHora:Minuto:00
+  fechaTextoLegible: "01 de septiembre de 2026", // Se muestra en la sección "Detalles del evento"
   horaTextoLegible: "7:00 p.m.",
   lugar: "Jardín de Eventos  Betania",
   direccion: "Calle 10 # 20-15, Aguachica, Cesar",
@@ -35,12 +35,53 @@ const configuracion = {
    Ejemplo de enlace final:  index.html?invitado=maria
 --------------------------------------------------------------------- */
 const invitados = [
-  { slug: "maria",         nombre: "María",         tipo: "María y acompañante", cupos: 2 },
-  { slug: "carlos",        nombre: "Carlos",        tipo: "Carlos y acompañante", cupos: 2 },
-  { slug: "ana",           nombre: "Ana",           tipo: "Ana y familia", cupos: 4 },
-  { slug: "juan",          nombre: "Juan",          tipo: "Juan y acompañante", cupos: 2 },
-  { slug: "pedro",         nombre: "Pedro",         tipo: "Pedro y familia", cupos: 4 },
-  { slug: "familia-gomez", nombre: "Familia Gómez", tipo: "Familia Gómez", cupos: 4 }
+  { slug: "diego-kate",    nombre: "Diego , Kate",  tipo: "Diego y Kate", cupos: 2 },
+  { slug: "hugo",          nombre: "Hugo",          tipo: "Hugo", cupos: 1 },
+  { slug: "sergio",           nombre: "Sergio",           tipo: "Sergio", cupos: 1 },
+  { slug: "estela-mello",          nombre: "Estela , Mello",          tipo: "Estela y Mello", cupos: 2 },
+  { slug: "juana-yovani",         nombre: "Juana , Yovani",         tipo: "Juana y Yovani", cupos: 2 },
+  { slug: "yeritza",              nombre: "Yeritza , Familia",      tipo: "Familia Yeritza", cupos: 4 },
+  { slug: "francisco",            nombre: "Francisco",              tipo: "Francisco", cupos: 1 },
+  { slug: "jorgeluis",         nombre: "Jorge Luis",         tipo: "Jorge Luis", cupos: 1 },
+  { slug: "claudia",         nombre: "Claudia",         tipo: "Claudia", cupos: 1 },
+  { slug: "quito-nuvia",         nombre: "Quito , Nuvia",         tipo: "Quito y Nuvia", cupos: 2 },
+  { slug: "lubis",         nombre: "Lubis",         tipo: "Lubis", cupos: 1 },
+  { slug: "bercelis-oswaldo",         nombre: "Bercelis , Oswaldo",         tipo: "Bercelis y Oswaldo", cupos: 2 },
+  { slug: "german",         nombre: "German",         tipo: "German", cupos: 1 },
+  { slug: "lucho",         nombre: "Lucho, familia",         tipo: "Lucho y familia", cupos: 4 },
+  { slug: "berlin",         nombre: "Berlín",         tipo: "Berlín", cupos: 1 },
+  { slug: "carla",         nombre: "Carla",         tipo: "Carla", cupos: 1 },
+  { slug: "lizandro",         nombre: "Lizandro",         tipo: "Lizandro", cupos: 1 },
+  { slug: "mariaj",         nombre: "Maria José",         tipo: "Maria José", cupos: 1 },
+  { slug: "sara",         nombre: "Sara",         tipo: "Sara", cupos: 1 },
+  { slug: "emanuel",         nombre: "Emanuel",         tipo: "Emanuel", cupos: 1 },
+  { slug: "andresf",         nombre: "Andrés Felipe",         tipo: "Andrés Felipe", cupos: 1 },
+  { slug: "natalia",         nombre: "Natalia",         tipo: "Natalia", cupos: 1 },
+  { slug: "victor-michell",         nombre: "Victor , Michell",         tipo: "Victor y Michell", cupos: 2 },
+  { slug: "diego-rosa",         nombre: "Diego , Rosa",         tipo: "Diego y Rosa", cupos: 2 },
+  { slug: "zenalda",         nombre: "Zenalda",         tipo: "Zenalda", cupos: 1 },
+  { slug: "yuber",         nombre: "Yuber",         tipo: "Yuber", cupos: 1 },
+  { slug: "karen",         nombre: "Karen",         tipo: "Karen", cupos: 1 },
+  { slug: "william",         nombre: "William",         tipo: "William", cupos: 1 },
+  { slug: "silvio",         nombre: "Silvio",         tipo: "Silvio", cupos: 1 },
+  { slug: "marlon",         nombre: "Marlon",         tipo: "Marlon", cupos: 1 },
+  { slug: "maruja-gabriela",         nombre: "Maruja , Gabriela",         tipo: "Maruja y Gabriela", cupos: 2 },
+  { slug: "marile",         nombre: "Marile",         tipo: "Marile", cupos: 1 },
+  { slug: "shaily",         nombre: "Shaily",         tipo: "Shaily", cupos: 1 },
+  { slug: "yulieht",         nombre: "Yulieht",         tipo: "Yulieht", cupos: 1 },
+  { slug: "luis-familia",         nombre: "Luis, familia",         tipo: "Luis y familia", cupos: 3 },
+  { slug: "nataliab",         nombre: "Natalia B.",         tipo: "Natalia B.", cupos: 1 },
+  { slug: "andres",         nombre: "Andrés",         tipo: "Andrés", cupos: 1 }
+  /*,{ slug: "",         nombre: "",         tipo: "", cupos:  },
+  { slug: "",         nombre: "",         tipo: "", cupos:  },
+  { slug: "",         nombre: "",         tipo: "", cupos:  },
+  { slug: "",         nombre: "",         tipo: "", cupos:  },
+  { slug: "",         nombre: "",         tipo: "", cupos:  },
+  { slug: "",         nombre: "",         tipo: "", cupos:  },
+  { slug: "",         nombre: "",         tipo: "", cupos:  },
+  { slug: "",         nombre: "",         tipo: "", cupos:  },
+  { slug: "",         nombre: "",         tipo: "", cupos:  }*/
+
 ];
 
 let invitadoActual = { nombre: "", cupos: 1 };
@@ -63,8 +104,8 @@ const fotosGaleria = [
   { src: "img/foto2.jpeg", alt: "Momento 2" },
   { src: "img/foto3.jpeg", alt: "Momento 3" },
   { src: "img/foto4.jpeg", alt: "Momento 4" },
-  { src: "img/foto5.jpg", alt: "Momento 5" },
-  { src: "img/foto6.jpg", alt: "Momento 6" }
+  { src: "img/foto5.jpeg", alt: "Momento 5" },
+  { src: "img/foto6.jpeg", alt: "Momento 6" }
 ];
 
 /* =====================================================================

@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "file:///C:/Users/pc/Desktop/invitacion-15/index.html",
+            "url": "file:///C:/Git/quinceanos_jeninfer/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
