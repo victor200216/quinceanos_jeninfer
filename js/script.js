@@ -79,7 +79,8 @@ const invitados = [
   { slug: "claudina",         nombre: "Claudina",         tipo: "Claudina", cupos: 1 },
   { slug: "jhoana",         nombre: "Jhoana",         tipo: "Jhoana", cupos: 1 },
   { slug: "nicolas",         nombre: "Nicolás",         tipo: "Nicolás", cupos: 1 },
-  { slug: "mariag",         nombre: "María Guebara.",         tipo: "María Guebara.", cupos: 1 }
+  { slug: "mariag",         nombre: "María Guebara.",         tipo: "María Guebara.", cupos: 1 },
+  { slug: "juanab",         nombre: "Juana Bachelt ",         tipo: "Juana Bachelt ", cupos: 1 }
   
 
 ];
