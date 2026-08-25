@@ -19,7 +19,7 @@ const configuracion = {
   fechaTextoLegible: "01 de septiembre de 2026", // Se muestra en la sección "Detalles del evento"
   horaTextoLegible: "7:00 p.m.",
   lugar: "Jardín de Eventos  Betania",
-  direccion: "Calle 10 # 20-15, Aguachica, Cesar",
+  direccion: "Calle 10 # 28-15, Aguachica, Cesar",
   // Pega aquí el enlace que te da Google Maps al presionar "Compartir" -> "Insertar un mapa" (para el iframe)
   googleMapsEmbed: "https://www.google.com/maps?q=Jard%C3%ADn+de+Eventos+Betania%2C+Calle+10+%23+20-15%2C+Aguachica%2C+Cesar%2C+Colombia&output=embed",
   // Pega aquí el enlace normal de Google Maps (el que abre la app / da direcciones)
