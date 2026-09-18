@@ -15,8 +15,8 @@
 --------------------------------------------------------------------- */
 const configuracion = {
   nombreQuinceanera: "Jennyfer Paola Bandera Araujo ",
-  fechaEvento: "2026-10-01T19:00:00",      // Año-Mes-DíaTHora:Minuto:00
-  fechaTextoLegible: "01 de octubre de 2026", // Se muestra en la sección "Detalles del evento"
+  fechaEvento: "2026-09-01T19:00:00",      // Año-Mes-DíaTHora:Minuto:00
+  fechaTextoLegible: "01 de septiembre de 2026", // Se muestra en la sección "Detalles del evento"
   horaTextoLegible: "7:00 p.m.",
   lugar: "Jardín de Eventos  Betania",
   direccion: "Calle 10 # 28-15, Aguachica, Cesar",
